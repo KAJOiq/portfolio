@@ -1,6 +1,9 @@
 import type { SiteConfig, SiteContent } from "../types";
 
-const BASE = import.meta.env.BASE_URL as string;
+import logo from "../assets/abdulrahman-small.jpg";
+import secret from "../assets/secret.png";
+import freelancer from "../assets/freelancerplatform.png";
+import compiler from "../assets/compilerdiscordbot.png";
 
 export const SITE_CONFIG: SiteConfig = {
   title: "Abdulrahman Ahmed — Software Developer",
@@ -8,7 +11,7 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     "Software Developer based in Baghdad, IRAQ. I specialize in Frontend and Backend application development and maintenance.",
   lang: "en",
-  siteLogo: `${BASE}abdulrahman-small.jpg`,  
+  siteLogo: logo, 
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
@@ -56,7 +59,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "A web-based system for managing official documents and correspondence, including workflows for letter creation, approval, assignment, and secure file handling.",
       linkPreview: "",
       linkSource: "",
-      image: `${BASE}secret.png`,          // <-- كان "/secret.png"
+      image: secret,          
       isPrivate: true 
     },
     {
@@ -64,7 +67,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "A system for managing and tracking vehicle durability inspection requests, including application processing, document uploads, and result reporting.",
       linkPreview: "",
       linkSource: "",
-      image: `${BASE}secret.png`,
+      image: secret,
       isPrivate: true
     },
     {
@@ -72,7 +75,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "Developed during Aon Bootcamp to practice building production-ready APIs and databases using .NET and SQL Server.",
       linkPreview: "https://github.com/aon-mentees/AonFreelancing",
       linkSource: "https://github.com/aon-mentees/AonFreelancing",
-      image: `${BASE}freelancerplatform.png`,
+      image: freelancer,
       isPrivate: false
     },
     {
@@ -80,7 +83,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "This Compiler for programming languages like Python, Java, and C++. It enables users to write code in these languages, execute it, and receive results directly through Discord commands.",
       linkPreview: "https://github.com/KAJOiq/CompilerDiscordBot",
       linkSource: "https://github.com/KAJOiq/CompilerDiscordBot",
-      image: `${BASE}compilerdiscordbot.png`,
+      image: compiler,
       isPrivate: false
     },
   ],
@@ -103,27 +106,9 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
   educations: [
-    {
-      institution: "Middle Technical University",
-      degree: "Diploma in Optometry Techniques",
-      startDate: "2021",
-      endDate: "2023",
-      summary: "Graduated"
-    },
-    {
-      institution: "University Of Baghdad",
-      degree: "Computer Science",
-      startDate: "2020",
-      endDate: "2021",
-      summary: "Not Graduated"
-    },
-    {
-      institution: "Al-Harithiya Distinguished High School",
-      degree: "High School Certificate",
-      startDate: "2014",
-      endDate: "2020",
-      summary: "Graduated"
-    },
+    { institution: "Middle Technical University", degree: "Diploma in Optometry Techniques", startDate: "2021", endDate: "2023", summary: "Graduated" },
+    { institution: "University Of Baghdad", degree: "Computer Science", startDate: "2020", endDate: "2021", summary: "Not Graduated" },
+    { institution: "Al-Harithiya Distinguished High School", degree: "High School Certificate", startDate: "2014", endDate: "2020", summary: "Graduated" },
   ],
   about: {
     description: `
@@ -131,6 +116,5 @@ export const SITE_CONTENT: SiteContent = {
 
     I enjoy creating clean, responsive, and scalable user interfaces, as well as building reliable APIs and database systems. My work often involves handling complex forms, workflows, document management, and task tracking. I'm committed to writing clean code, learning continuously, and delivering solutions that solve real problems efficiently.
     `,
-    image: `${BASE}abdulrahman-small.jpg`,  
-  },
-};
+    image: logo, 
+}}
