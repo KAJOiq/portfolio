@@ -1,12 +1,14 @@
 import type { SiteConfig, SiteContent } from "../types";
 
+const BASE = import.meta.env.BASE_URL as string;
+
 export const SITE_CONFIG: SiteConfig = {
   title: "Abdulrahman Ahmed — Software Developer",
   author: "Abdulrahman Ahmed Salih",
   description:
     "Software Developer based in Baghdad, IRAQ. I specialize in Frontend and Backend application development and maintenance.",
   lang: "en",
-  siteLogo: "/abdulrahman-small.jpg",
+  siteLogo: `${BASE}abdulrahman-small.jpg`,  
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
@@ -54,7 +56,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "A web-based system for managing official documents and correspondence, including workflows for letter creation, approval, assignment, and secure file handling.",
       linkPreview: "",
       linkSource: "",
-      image: "/secret.png",
+      image: `${BASE}secret.png`,          // <-- كان "/secret.png"
       isPrivate: true 
     },
     {
@@ -62,7 +64,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "A system for managing and tracking vehicle durability inspection requests, including application processing, document uploads, and result reporting.",
       linkPreview: "",
       linkSource: "",
-      image: "/secret.png",
+      image: `${BASE}secret.png`,
       isPrivate: true
     },
     {
@@ -70,7 +72,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "Developed during Aon Bootcamp to practice building production-ready APIs and databases using .NET and SQL Server.",
       linkPreview: "https://github.com/aon-mentees/AonFreelancing",
       linkSource: "https://github.com/aon-mentees/AonFreelancing",
-      image: "/freelancerplatform.png",
+      image: `${BASE}freelancerplatform.png`,
       isPrivate: false
     },
     {
@@ -78,7 +80,7 @@ export const SITE_CONTENT: SiteContent = {
       summary: "This Compiler for programming languages like Python, Java, and C++. It enables users to write code in these languages, execute it, and receive results directly through Discord commands.",
       linkPreview: "https://github.com/KAJOiq/CompilerDiscordBot",
       linkSource: "https://github.com/KAJOiq/CompilerDiscordBot",
-      image: "/compilerdiscordbot.png",
+      image: `${BASE}compilerdiscordbot.png`,
       isPrivate: false
     },
   ],
@@ -124,13 +126,11 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
   about: {
-    description:`
+    description: `
     Hi, I’m a passionate Full-Stack Software Developer with a strong focus on building real-world web applications. I specialize in front-end development using React.js and back-end technologies like C#, .NET, and SQL Server.
 
     I enjoy creating clean, responsive, and scalable user interfaces, as well as building reliable APIs and database systems. My work often involves handling complex forms, workflows, document management, and task tracking. I'm committed to writing clean code, learning continuously, and delivering solutions that solve real problems efficiently.
     `,
-    image: "/abdulrahman-small.jpg",
+    image: `${BASE}abdulrahman-small.jpg`,  
   },
 };
-
-// #5755ff
