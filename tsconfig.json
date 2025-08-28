@@ -1,6 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": ["src", "astro.config.mjs", "src/env.d.ts"],
+  "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
     "baseUrl": ".",
@@ -10,10 +10,6 @@
       "@icons/*": ["src/icons/*"],
       "@types": ["src/types/index.ts"],
       "@config": ["src/config/index.ts"]
-    },
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "types": ["astro/client"]
-
+    }
   }
 }
